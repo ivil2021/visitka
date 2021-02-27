@@ -1,9 +1,8 @@
 body {
   /*background: url(images/paper_grey_bg.jpg);*/
   background: url(images/bg_beach.jpg);
-
   background-repeat: no-repeat;
-  /*background: url(images/bg_geometry.png);*/
+  background-size: cover;
 }
 
 h1 {
@@ -131,6 +130,11 @@ p {
   position: relative;
 }
 
+.email:hover {
+  box-shadow: 0 0 5px 3px red;
+  cursor: pointer;
+}
+
 .shortcut_img {
   /*блок с иконками*/
   display: flex;
@@ -187,6 +191,7 @@ li:hover {
 @media screen and (max-width: 1227px) {
   .block__row {
     flex-direction: column;
+    /*flex-wrap: wrap;*/
   }
 
   .block__item {
@@ -194,11 +199,11 @@ li:hover {
   }
 
   .main_menu {
-    display: flex;
+    display: block;
   }
 
-  .block__item {
-    margin: 0 8em 1em;
+  .block__row {
+    align-items: centerd;
   }
 }
 
