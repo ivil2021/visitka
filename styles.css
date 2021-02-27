@@ -42,7 +42,7 @@ h1 {
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  width: 100%;
+  /* width: 100%; */
   /*border: 2px solid yellow;*/
   /*margin: 0px 0px 20px 0px;*/
 
@@ -61,7 +61,7 @@ h1 {
 /**/ /**/ /**/
 .block__column1 {
   /*блок навигации*/
-  align-self: flex-start; /*ограничивает высоту блока с нижней стороны*/
+  /*align-self: flex-start; /*ограничивает высоту блока с нижней стороны*/
   flex-basis: 45px; /*базовый размер, от него увеличиваться при grow или сужаться при shrink*/
   margin-right: 5px;
 }
@@ -100,7 +100,7 @@ h1 {
   font-weight: 700;
 }
 
-ul {
+.main_menu {
   width: 93%; /*ширина блока навигации*/
 }
 
@@ -199,7 +199,8 @@ li:hover {
   }
 
   .main_menu {
-    display: block;
+    display: flex;
+    margin: 0 auto;
   }
 
   .block__row {
