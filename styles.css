@@ -1,0 +1,221 @@
+body {
+  /*background: url(images/paper_grey_bg.jpg);*/
+  background: url(images/bg_beach.jpg);
+
+  background-repeat: no-repeat;
+  /*background: url(images/bg_geometry.png);*/
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.main_img img {
+  /*главная картинка*/
+  width: 150px; /*ширина картинки*/
+  height: 150px; /*высота картинки*/
+  border-radius: 50%; /*круглая картинка*/
+  border: 5px solid yellow; /*желтая рамка вокруг картинки*/
+  /*align-items: center;*/
+}
+
+.main_img {
+  /*блок для главной картинки*/
+  width: 100%;
+  /*border: 2px solid red;*/
+  display: flex;
+  justify-content: center; /*центр. по гориз. карт. в блоке*/
+  margin-bottom: 15px;
+  /*justify-content: center; */
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.block__row {
+  /*возможно контейнер всего содержимого*/
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+  /*border: 2px solid yellow;*/
+  /*margin: 0px 0px 20px 0px;*/
+
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+.block__column {
+  /*border: 2px solid purple;*/
+  flex-basis: 300px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/**/ /**/ /**/
+.block__column1 {
+  /*блок навигации*/
+  align-self: flex-start; /*ограничивает высоту блока с нижней стороны*/
+  flex-basis: 45px; /*базовый размер, от него увеличиваться при grow или сужаться при shrink*/
+  margin-right: 5px;
+}
+
+.block__column2 {
+  /*блок2*/
+  flex-basis: 300px;
+  margin-right: 7px;
+}
+
+.block__column3 {
+  /*блок2*/
+  flex-basis: 300px;
+}
+/**/ /**/ /**/
+
+.block__item {
+  /*м/б все 3 блока*/
+  /*background-color: green;*/
+  /*background: url(images/bg_geomerty.jpg);*/
+  background: url(images/paper_grey_bg.jpg);
+  /*background: silver;*/
+  padding: 20px;
+  font-size: 20px;
+  /*color: white;*/
+  color: blue;
+  font-weight: 700;
+  /*border: 5px solid green;*/
+}
+
+.block__item1 {
+  /*блок меню*/
+  /*background-color: red;*/
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+}
+
+ul {
+  width: 93%; /*ширина блока навигации*/
+}
+
+li {
+  padding: 7px; /*внутренний отступ до текста*/
+  width: 100%; /*ширина*/
+  margin: 0px 0px 5px 0px; /*внешний отступ до текста*/
+  /*border: 1px solid white;*/
+  background-color: #30d5c8;
+  font-size: 16px;
+}
+
+span {
+  color: #30d5c8;
+}
+
+p {
+  margin: 10px;
+  padding: 7px;
+  border-radius: 5px;
+  /*border-top: 3px solid black;*/
+}
+
+.email {
+  color: white;
+  background: #30d5c8;
+  position: relative;
+}
+
+.shortcut_img {
+  /*блок с иконками*/
+  display: flex;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.shortcut_img img {
+  width: 30px; /*ширина картинки*/
+  height: 30px; /*высота картинки*/
+  /*display: flex;*/
+  /*justify-content: center;*/
+  margin: 5px;
+}
+
+.shortcut_img img:hover {
+  transform: scale(1.8);
+  /*box-shadow: 5px 10px 15px red;*/
+  box-shadow: 0 0 5px 2px red;
+}
+
+.block__column3 p {
+  border: 3px double green;
+}
+
+.block__item {
+  /*скрол*/
+  overflow: auto;
+  /*overflow-x:hidden;*/
+  height: 600px;
+}
+
+li:hover {
+  box-shadow: 0 0 5px 5px red;
+  transform: translateX(10px);
+  cursor: pointer;
+}
+
+.blink2 {
+  animation: blink 4s infinite; /* Параметры анимации */
+}
+@keyframes blink {
+  0% {
+    opacity: 1; /* Непрозрачный текст */
+  }
+  50% {
+    opacity: 0; /* Прозрачный текст */
+  }
+  100% {
+    opacity: 1; /* Прозрачный текст */
+  }
+}
+
+@media screen and (max-width: 1227px) {
+  .block__row {
+    flex-direction: column;
+  }
+
+  .block__item {
+    margin: 0 8em;
+  }
+
+  .main_menu {
+    display: flex;
+  }
+
+  .block__item {
+    margin: 0 8em 1em;
+  }
+}
+
+/* @media screen and (max-width: 1200px) {
+  .wrapper {
+    max-width: 970px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    max-width: 750px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .wrapper {
+    max-width: none;
+  }
+} */
