@@ -1,36 +1,34 @@
 body {
-  /*background: url(images/paper_grey_bg.jpg);*/
   background: url(images/bg_space.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 @font-face {
-  font-family: Pattaya; /* Гарнитура шрифта */
-  src: url(fonts/Pattaya/Pattaya-Regular.ttf); /* Путь к файлу со шрифтом */
+  font-family: Pattaya;
+  src: url(fonts/Pattaya/Pattaya-Regular.ttf);
 }
 
 h1 {
   font-size: 24px;
 }
 
+.block__column2 {
+  text-align: center;
+}
+
 .main_img img {
-  /*главная картинка*/
-  width: 150px; /*ширина картинки*/
-  height: 150px; /*высота картинки*/
-  border-radius: 50%; /*круглая картинка*/
-  border: 5px solid yellow; /*желтая рамка вокруг картинки*/
-  /*align-items: center;*/
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid yellow;
 }
 
 .main_img {
-  /*блок для главной картинки*/
   width: 100%;
-  /*border: 2px solid red;*/
   display: flex;
-  justify-content: center; /*центр. по гориз. карт. в блоке*/
-  margin-bottom: 15px;
-  /*justify-content: center; */
+  justify-content: center;
+  margin-bottom: 1em;
 }
 
 .wrapper {
@@ -42,84 +40,61 @@ h1 {
 }
 
 .block__row {
-  /*возможно контейнер всего содержимого*/
   display: flex;
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  /* width: 100%; */
-  /*border: 2px solid yellow;*/
-  /*margin: 0px 0px 20px 0px;*/
-
   max-width: 1200px;
-  margin: 0px auto;
   padding: 0px 15px;
 }
 
 .block__column {
-  /*border: 2px solid purple;*/
   flex-basis: 300px;
   flex-grow: 1;
   flex-shrink: 1;
 }
 
-/**/ /**/ /**/
 .block__column1 {
-  /*блок навигации*/
-  /*align-self: flex-start; /*ограничивает высоту блока с нижней стороны*/
-  flex-basis: 45px; /*базовый размер, от него увеличиваться при grow или сужаться при shrink*/
-  margin-right: 5px;
+  flex-basis: 45px;
 }
 
 .block__column2 {
-  /*блок2*/
   flex-basis: 300px;
-  margin-right: 7px;
   font-family: Pattaya;
 }
 
 .block__column3 {
-  /*блок2*/
   flex-basis: 300px;
   font-family: Pattaya;
 }
-/**/ /**/ /**/
 
 .block__item {
-  /*м/б все 3 блока*/
-  /*background-color: green;*/
-  /*background: url(images/bg_geomerty.jpg);*/
-
   background: url(images/bg_geometry2.jpg);
-  /*opacity: 0.6;*/
-  /*background-color: rgb(76, 21, 98);*/
-
-  /*background: silver;*/
   padding: 20px;
   font-size: 20px;
-  /*color: white;*/
   color: blue;
   font-weight: 300;
-  /*border: 5px solid green;*/
+  margin: 0 3%;
+}
+
+.block__item div {
+  text-align: center;
 }
 
 .block__item1 {
-  /*блок меню*/
-  /*background-color: red;*/
   font-size: 20px;
   color: white;
   font-weight: 700;
 }
 
 .main_menu {
-  width: 93%; /*ширина блока навигации*/
+  width: 93%;
 }
 
 li {
-  padding: 7px; /*внутренний отступ до текста*/
-  width: 100%; /*ширина*/
-  margin: 0px 0px 5px 0px; /*внешний отступ до текста*/
-  /*border: 1px solid white;*/
+  padding: 7px;
+  width: 100%;
+  margin: 0px 0px 5px 0px;
   background-color: #30d5c8;
   font-size: 16px;
   text-align: center;
@@ -133,7 +108,6 @@ p {
   margin: 10px;
   padding: 7px;
   border-radius: 5px;
-  /*border-top: 3px solid black;*/
 }
 
 .email {
@@ -148,23 +122,19 @@ p {
 }
 
 .shortcut_img {
-  /*блок с иконками*/
   display: flex;
   justify-content: center;
   border: 2px solid white;
 }
 
 .shortcut_img img {
-  width: 30px; /*ширина картинки*/
-  height: 30px; /*высота картинки*/
-  /*display: flex;*/
-  /*justify-content: center;*/
+  width: 30px;
+  height: 30px;
   margin: 5px;
 }
 
 .shortcut_img img:hover {
   transform: scale(1.8);
-  /*box-shadow: 5px 10px 15px red;*/
   box-shadow: 0 0 5px 2px red;
 }
 
@@ -173,9 +143,7 @@ p {
 }
 
 .block__item {
-  /*скрол*/
   overflow: auto;
-  /*overflow-x:hidden;*/
   height: 600px;
 }
 
@@ -185,29 +153,34 @@ li:hover {
   cursor: pointer;
 }
 
+h1 .blink,
+.blink2,
+.email p {
+  text-align: center;
+}
+
 .blink2 {
-  animation: blink 4s infinite; /* Параметры анимации */
+  animation: blink 4s infinite;
 }
 @keyframes blink {
   0% {
-    opacity: 1; /* Непрозрачный текст */
+    opacity: 1;
   }
   50% {
-    opacity: 0; /* Прозрачный текст */
+    opacity: 0;
   }
   100% {
-    opacity: 1; /* Прозрачный текст */
+    opacity: 1;
   }
 }
 
 @media screen and (max-width: 1227px) {
   .block__row {
     flex-direction: column;
-    /*flex-wrap: wrap;*/
   }
 
   .block__item {
-    margin: 0 8em;
+    margin: 0 3% 2% 3%;
   }
 
   .main_menu {
@@ -219,21 +192,3 @@ li:hover {
     align-items: centerd;
   }
 }
-
-/* @media screen and (max-width: 1200px) {
-  .wrapper {
-    max-width: 970px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .wrapper {
-    max-width: 750px;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .wrapper {
-    max-width: none;
-  }
-} */
