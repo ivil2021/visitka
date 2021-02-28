@@ -13,15 +13,12 @@ h1 {
   font-size: 24px;
 }
 
-.block__column2 {
-  text-align: center;
-}
-
 .main_img img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   border: 5px solid yellow;
+  z-index: 1;
 }
 
 .main_img {
@@ -61,6 +58,8 @@ h1 {
 .block__column2 {
   flex-basis: 300px;
   font-family: Pattaya;
+  text-align: center;
+  margin-bottom: 5%;
 }
 
 .block__column3 {
@@ -69,12 +68,31 @@ h1 {
 }
 
 .block__item {
-  background: url(images/bg_geometry2.jpg);
-  padding: 20px;
+  padding: 0 20px;
   font-size: 20px;
   color: blue;
   font-weight: 300;
-  margin: 0 3%;
+  margin: 0 3% 5% 3%;
+  color: white;
+}
+
+.block__item p {
+  color: white;
+}
+
+.block__item_bg-wrapper {
+  position: relative;
+}
+.block__item_bg-wrapper::before {
+  content: "";
+  background-image: url("images/bg_geometry2.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
 }
 
 .block__item div {
@@ -181,6 +199,7 @@ h1 .blink,
 
   .block__item {
     margin: 0 3% 2% 3%;
+    color: white;
   }
 
   .main_menu {
