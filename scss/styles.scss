@@ -1,24 +1,16 @@
 body {
-  background: url(images/bg_space.jpg);
+  background: url(../images/bg_space.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 @font-face {
   font-family: Pattaya;
-  src: url(fonts/Pattaya/Pattaya-Regular.ttf);
+  src: url(../fonts/Pattaya/Pattaya-Regular.ttf);
 }
 
 h1 {
   font-size: 24px;
-}
-
-.main_img img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 5px solid yellow;
-  z-index: 1;
 }
 
 .main_img {
@@ -26,6 +18,16 @@ h1 {
   display: flex;
   justify-content: center;
   margin-bottom: 1em;
+
+  margin-top: 1em;
+
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid yellow;
+    z-index: 1;
+  }
 }
 
 .wrapper {
@@ -65,6 +67,10 @@ h1 {
 .block__column3 {
   flex-basis: 300px;
   font-family: Pattaya;
+
+  p {
+    border: 3px double green;
+  }
 }
 
 .block__item {
@@ -74,29 +80,18 @@ h1 {
   font-weight: 300;
   margin: 0 3% 5% 3%;
   color: white;
-}
-
-.block__item p {
+  overflow: auto;
+  height: 600px;
+  margin: 0 3% 2% 3%;
   color: white;
-}
 
-.block__item_bg-wrapper {
-  position: relative;
-}
-.block__item_bg-wrapper::before {
-  content: "";
-  background-image: url("images/bg_geometry2.jpg");
-  background-size: cover;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.4;
-}
+  p {
+    color: white;
+  }
 
-.block__item div {
-  text-align: center;
+  div {
+    text-align: center;
+  }
 }
 
 .block__item1 {
@@ -107,15 +102,6 @@ h1 {
 
 .main_menu {
   width: 93%;
-}
-
-li {
-  padding: 7px;
-  width: 100%;
-  margin: 0px 0px 5px 0px;
-  background-color: #30d5c8;
-  font-size: 16px;
-  text-align: center;
 }
 
 span {
@@ -132,43 +118,26 @@ p {
   color: white;
   background: #30d5c8;
   position: relative;
+
+  &:hover {
+    box-shadow: 0 0 5px 3px red;
+    cursor: pointer;
+  }
 }
 
-.email:hover {
-  box-shadow: 0 0 5px 3px red;
-  cursor: pointer;
-}
+li {
+  padding: 7px;
+  width: 100%;
+  margin: 0px 0px 5px 0px;
+  background-color: #30d5c8;
+  font-size: 16px;
+  text-align: center;
 
-.shortcut_img {
-  display: flex;
-  justify-content: center;
-  border: 2px solid white;
-}
-
-.shortcut_img img {
-  width: 30px;
-  height: 30px;
-  margin: 5px;
-}
-
-.shortcut_img img:hover {
-  transform: scale(1.8);
-  box-shadow: 0 0 5px 2px red;
-}
-
-.block__column3 p {
-  border: 3px double green;
-}
-
-.block__item {
-  overflow: auto;
-  height: 600px;
-}
-
-li:hover {
-  box-shadow: 0 0 5px 5px red;
-  transform: translateX(10px);
-  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 5px 5px red;
+    transform: translateX(10px);
+    cursor: pointer;
+  }
 }
 
 h1 .blink,
@@ -180,6 +149,23 @@ h1 .blink,
 .blink2 {
   animation: blink 4s infinite;
 }
+
+.block__item_bg-wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("../images/bg_geometry2.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.4;
+  }
+}
+
 @keyframes blink {
   0% {
     opacity: 1;
@@ -197,14 +183,24 @@ h1 .blink,
     flex-direction: column;
   }
 
-  .block__item {
-    margin: 0 3% 2% 3%;
-    color: white;
-  }
-
   .main_menu {
     display: flex;
     margin: 0 auto;
+  }
+
+  .block__row {
+    align-items: centerd;
+  }
+}
+
+@media screen and (max-width: 557px) {
+  .block__row {
+    flex-direction: column;
+  }
+
+  .main_menu {
+    display: block;
+    margin: auto;
   }
 
   .block__row {
